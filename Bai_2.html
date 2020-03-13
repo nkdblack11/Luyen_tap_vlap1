@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script language="JavaScript">
+    let n = prompt('nhập nhiệt độ: ')
+    function nhap(n){
+        if (n<20){
+            let i = prompt('tăng nhiệt độ')
+            nhap(i)
+        }else if (n>=100){
+            let i = prompt('giảm nhiệt độ')
+            nhap(i)
+        }
+        return true
+    }
+    nhap(n)
+</script>
+</body>
+</html>
