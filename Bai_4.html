@@ -14,7 +14,6 @@
         let j = 0
         for (let i = 0; i < so; i++) {
             if (i < 2 && tim_so(i)) {
-                // document.write(i + '</br>')
                 kq += i + '</br>'
                 j++
             } else {
@@ -26,7 +25,7 @@
                     j++
                 }
             }
-            if (j == 5) {
+            if (j == 1) {
                 break;
             }
         }
@@ -41,7 +40,7 @@
         return false
     }
 </script>
-<h1>Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h1>
+<h1>Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</h1>
 <p>nhập dãy số từ 1 tới:</p>
 <input id="so" type="text"/>
 <button type="button" onclick="xuat.innerHTML=fibonacci(so.value)">click</button>
