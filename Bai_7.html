@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai7</title>
+</head>
+<body>
+<h2>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in
+    ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</h2>
+<div id="xuat"></div>
+<script language="JavaScript">
+    function tinh() {
+        let kq = ''
+        for(let i = 0; i <= 100; i++) {
+            // if (n <= 100 && (i%3)!=0 && (i%5)!=0) {
+            //     kq += i + '</br>'
+            // }
+            // if ((i % 3) == 0) {
+            //     kq += 'Fizz' + '</br>'
+            // }
+            // if ((i % 5) == 0) {
+            //     kq += 'Buzz' + '</br>'
+            // }
+            if ((i % 3) == 0 && (i % 5) == 0) {
+                kq += 'FizzBuzz' + '</br>'
+            } else if ((i % 5) == 0) {
+                kq += 'Buzz' + '</br>'
+            }else if ((i % 3) == 0) {
+                kq += 'Fizz' + '</br>'
+            }else {
+                kq += i + '</br>'
+            }
+        }
+        document.getElementById('xuat').innerHTML = kq
+    }
+    tinh()
+</script>
+</body>
+</html>
