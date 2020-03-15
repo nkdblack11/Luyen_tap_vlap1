@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+    <script language="JavaScript">
+        function tinh(so) {
+            let _so = parseInt(so)
+            let kq = 0
+            let j = 0
+            for (let i = 0; i <= _so; i++) {
+                console.log(i)
+                if ((i % 7) == 0) {
+                    kq += i + ', '
+                    j++
+                }
+                if (j == 30) {
+                    break;
+                }
+            }
+            return '30 số đầu tiên trong dãy số chia hết cho 7 là: ' + kq
+        }
+    </script>
+</head>
+<body>
+<h1>Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h1>
+<p>nhập dãy số từ 1 tới:</p>
+<input id="so" type="text"/>
+<button type="button" onclick="xuat.innerHTML=tinh(so.value)">click</button>
+<div id="xuat"></div>
+</body>
+</html>
