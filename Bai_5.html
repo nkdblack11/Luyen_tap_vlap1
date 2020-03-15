@@ -5,41 +5,37 @@
     <title>Bai5</title>
     <script language="JavaScript">
         function fibonacci(so) {
+            let _so = parseInt(so)
             let a0 = 0
             let a1 = 1
             let a2 = 0
-            let kq = ""
-            for (let i = 0; i < so; i++) {
+            let kq = 0
+            let j = 0
+            for (let i = 0; i < _so; i++) {
                 if (i < 2) {
-                    kq += i + '</br>'
+                    kq += i
+                    j++
                 } else {
                     a2 = a0 + a1
                     a0 = a1
                     a1 = a2
-                        kq += a2 + '</br>'
+                    kq += a2
+                    j++
+                }
+                if(j==20){
+                    break;
                 }
             }
-            return kq
+            return 'Tổng của 20 số đầu tiên trong dãy số fibonacci là: ' + kq
         }
-        function tinh_tong(so) {
-            let t = parseInt(so)
-            let tong = ""
-            for (let i=0;i<t;i++){
-                tong = fibonacci(i)
-                console.log(tong)
-                if (i<=20){
-                    tong = i + i
-                    return 'Tổng 20 số đầu tiên trong dãy số fibonacci là :' + tong
-                }
-            }
-        }
+
     </script>
 </head>
 <body>
 <h1>Tổng của 20 số trong dãy fibonacci đầu tiên.</h1>
 <p>nhập dãy số từ 1 tới:</p>
 <input id="so" type="text"/>
-<button type="button" onclick="xuat.innerHTML=tinh_tong(so.value)">click</button>
+<button type="button" onclick="xuat.innerHTML=fibonacci(so.value)">click</button>
 <div id="xuat"></div>
 </body>
 </html>
