@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="JavaScript">
+
+        function choi() {
+            let s = parseInt(prompt('Bạn muốn đoán trong khoảng nào'))
+            let a = Math.floor(Math.random() * s);
+            let b = parseInt(prompt('Nhập số bạn muốn đoán'))
+            for (i = 0; i < 3; i++) {
+                if (b == a) {
+                    document.write('<h1>Chúc mừng bạn đã thắng</h1>')
+                    break;
+                }
+                if (b < a) {
+                    b = parseInt(prompt('Số nhở hơn' + ' Game Over'))
+                }
+
+                if (b > a) {
+                    b = parseInt(prompt('Số lớn hơn' + ' Game Over'))
+                }
+                document.write('<h1>Game Over</h1>')
+            }
+
+        }
+    </script>
+</head>
+<body>
+<h1>Game "Hãy thử đoán xem!"</h1>
+<button type="button" onclick="choi()"> Chơi</button>
+</body>
+</html>
